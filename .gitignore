@@ -1,1 +1,62 @@
+# --- Environment / secrets ---
 .env
+
+
+.adk/
+
+# --- Python ---
+/__pycache__
+__pycache__/*
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+*.egg
+
+# Virtual environments
+venv/
+.venv/
+env/
+ENV/
+
+# --- Python tooling caches ---
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# --- ADK / agent runtime artifacts ---
+# Per-agent session/artifact storage rooted at /app (per local_storage.py logs)
+*.session.json
+sessions/
+artifacts/
+
+# --- Docker volumes if ever bind-mounted locally instead of named volumes ---
+chroma_data/
+mongo_data/
+
+# --- IDE / editor ---
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# --- OS cruft ---
+.DS_Store
+Thumbs.db
+
+# --- Logs ---
+*.log
+logs/
+
+# --- Codespaces / devcontainer local state (keep .devcontainer/ itself, ignore local overrides) ---
+.devcontainer/*.local.json
+
+# --- Test uploads used for manual testing ---
+dummy_ingestion_test_data.txt
+*.test_upload.*

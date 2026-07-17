@@ -1,0 +1,59 @@
+# --- Git ---
+.git
+.gitignore
+
+.adk/
+
+# --- Environment / secrets (should be injected via env_file, not baked into image) ---
+.env
+.env.*
+!.env.example
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+venv/
+.venv/
+env/
+ENV/
+
+# --- Python tooling caches ---
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# --- Docker itself ---
+Dockerfile
+docker-compose.yml
+docker-compose.override.yml
+
+# --- IDE / editor ---
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# --- OS cruft ---
+.DS_Store
+Thumbs.db
+
+# --- Logs ---
+*.log
+logs/
+
+# --- Local dev-only data (should never be baked into the image) ---
+chroma_data/
+mongo_data/
+sessions/
+artifacts/
+
+# --- Docs / non-runtime files (optional trim, keep if you want smaller build context) ---
+README.md
+docs/
+
+# --- Codespaces / devcontainer config (not needed inside the container) ---
+.devcontainer/
