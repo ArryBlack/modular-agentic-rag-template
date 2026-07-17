@@ -1,0 +1,5 @@
+google-genai
+google-adk
+python-magic
+pymongo
+chromadb
