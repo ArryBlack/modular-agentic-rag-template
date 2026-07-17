@@ -66,7 +66,7 @@ Before you start, make sure you have:
 4. Open the ADK web interface in your browser:
 
    - Local: http://localhost:8000
-   - In Codespaces: use the forwarded port for port 8000
+   - In Codespaces: use the forwarded port for port 8000 (from cloudflared)
 
 5. Upload a supported text document and let the agent process it.
 
@@ -77,10 +77,7 @@ The stack uses the following environment variables:
 | Variable | Purpose | Default |
 | --- | --- | --- |
 | GOOGLE_API_KEY | Required for Gemini API access | none |
-| CHROMA_HOST | Chroma service hostname | chroma |
-| CHROMA_PORT | Chroma service port | 8000 |
-| MONGO_URI | MongoDB connection string | mongodb://mongo:27017 |
-| ALLOWED_ORIGINS | CORS origins for the agent | * |
+
 
 ## Local development setup
 
